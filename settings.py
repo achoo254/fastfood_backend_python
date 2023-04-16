@@ -5,7 +5,8 @@ PORT = 8088
 LOG_LEVEL = 'INFO'
 
 # Need to check and return boolean, so check for String "True"
-APP_ENVIRONMENT = os.getenv("DEBUG") == "True"
+print(os.environ.keys())
+APP_ENVIRONMENT = os.environ.get('ENV') == 'development'
 
 if APP_ENVIRONMENT:
     load_dotenv(".env.development")
