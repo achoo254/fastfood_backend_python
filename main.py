@@ -10,12 +10,7 @@ from api.crud.order import orderRouter
 app = FastAPI()
 
 origins = [
-    "http://localhost",
-    "http://localhost:8017",
-    "http://103.75.184.109",
-    "https://103.75.184.109",
-    "http://fastfood.hoandat.tech",
-    "https://fastfood.hoandat.tech",
+    "*"
 ]
 
 app.add_middleware(
