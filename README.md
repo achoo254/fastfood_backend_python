@@ -1,4 +1,4 @@
-# fastfood_backend_python
+# fastfood_backend_python - Doc API http://103.75.184.109:8088/docs
 1. Để chạy ứng dụng BE (mạng nội bộ - localhost với port yêu cầu 8088) cần cài đặt database MongoDB - port 27017 với tài khoản db được tạo như sau:
 ```
 db.createUser(
