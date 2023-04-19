@@ -30,11 +30,11 @@ class Product:
     @staticmethod
     def from_dict(obj: Any) -> 'Product':
         assert isinstance(obj, dict)
-        name = from_str(obj.get("name"))
-        image = from_str(obj.get("image"))
-        price = from_int(obj.get("price"))
-        note = from_str(obj.get("note"))
-        count = from_int(obj.get("count"))
+        name = from_str(obj.get("name")) if obj.get("name") else ""
+        image = from_str(obj.get("image")) if obj.get("image") else ""
+        price = from_int(obj.get("price")) if obj.get("price") else 0
+        note = from_str(obj.get("note")) if obj.get("note") else ""
+        count = from_int(obj.get("count")) if obj.get("count") else 0
         return Product(name, image, price, note, count)
 
     def to_dict(self) -> dict:
