@@ -13,3 +13,4 @@ else:
     load_dotenv(".env.production")
 
 HOST = os.environ.get("HOST")
+PORT_MONGO = os.environ.get("PORT_MONGO")
