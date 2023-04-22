@@ -42,6 +42,7 @@ async def get_orders(current_user: dict = Depends(get_current_user)):
         orders = []
         for order in db.order.find():
             orders.append(order_response(order))
+        orders.sort(key=lambda i: i['created'], reverse=True)
         return response(orders)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
